@@ -21,7 +21,7 @@ process.on("SIGTERM", () => process.exit(0))
 
 async function main() {
   const program = new Command()
-    .name("shadcn")
+    .name("shadcn2")
     .description("add items from registries to your project")
     .version(
       packageJson.version || "1.0.0",

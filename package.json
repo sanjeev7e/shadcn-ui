@@ -10,7 +10,12 @@
   },
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "!**/test/**",
+    "!**/fixtures/**",
+    "!**/temp/**",
+    "!packages/tests/temp/**",
+    "!deprecated/**"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -19,11 +24,11 @@
     "registry:capture": "pnpm --filter=v4 registry:capture",
     "examples:build": "pnpm --filter=v4 examples:build",
     "dev": "turbo run dev --parallel",
-    "shadcn:dev": "turbo --filter=shadcn dev",
-    "shadcn": "pnpm --filter=shadcn start:dev",
-    "shadcn:prod": "pnpm --filter=shadcn start:prod",
-    "shadcn:build": "pnpm --filter=shadcn build",
-    "shadcn:test": "pnpm --filter=shadcn test",
+    "shadcn:dev": "turbo --filter=shadcn2 dev",
+    "shadcn": "pnpm --filter=shadcn2 start:dev",
+    "shadcn:prod": "pnpm --filter=shadcn2 start:prod",
+    "shadcn:build": "pnpm --filter=shadcn2 build",
+    "shadcn:test": "pnpm --filter=shadcn2 test",
     "v4:dev": "pnpm --filter=v4 dev",
     "v4:build": "pnpm --filter=v4 build",
     "lint": "turbo run lint",
@@ -82,10 +87,8 @@
     "start-server-and-test": "^2.0.12",
     "typescript": "^5.5.3"
   },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.2.2",
-      "@types/react-dom": "19.2.2"
-    }
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }

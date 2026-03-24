@@ -30,7 +30,7 @@ export function buildUrlAndHeadersForRegistryItem(
     if (isUrl(name) || isLocalFile(name) || isLocalPath(name)) {
       return null
     }
-    registry = "@shadcn"
+    registry = "@shadcn2"
   }
 
   const registries = { ...BUILTIN_REGISTRIES, ...config?.registries }

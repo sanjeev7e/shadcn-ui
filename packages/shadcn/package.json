@@ -1,5 +1,5 @@
 {
-  "name": "shadcn",
+  "name": "shadcn2",
   "version": "3.8.5",
   "description": "Add components to your apps.",
   "publishConfig": {
@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "author": {
-    "name": "shadcn",
+    "name": "shadcn2",
     "url": "https://twitter.com/shadcn"
   },
   "repository": {
@@ -23,7 +23,7 @@
     "ui",
     "tailwind",
     "radix-ui",
-    "shadcn"
+    "shadcn2"
   ],
   "type": "module",
   "exports": {

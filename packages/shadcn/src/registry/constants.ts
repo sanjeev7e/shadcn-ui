@@ -2,7 +2,7 @@ import { registryConfigSchema } from "@/src/schema"
 import { z } from "zod"
 
 export const REGISTRY_URL =
-  process.env.REGISTRY_URL ?? "https://ui.shadcn.com/r"
+  process.env.REGISTRY_URL ?? "https://shadcn2.yourdomain.com/r"
 
 export const FALLBACK_STYLE = "new-york-v4"
 
@@ -31,7 +31,7 @@ export const BASE_COLORS = [
 
 // Built-in registries that are always available and cannot be overridden
 export const BUILTIN_REGISTRIES: z.infer<typeof registryConfigSchema> = {
-  "@shadcn": `${REGISTRY_URL}/styles/{style}/{name}.json`,
+  "@shadcn2": `${REGISTRY_URL}/styles/{style}/{name}.json`,
 }
 
 export const BUILTIN_MODULES = new Set([

@@ -42,3 +42,6 @@ tsconfig.tsbuildinfo
 
 .notes
 .playwright-mcp
+
+*env*
+!.env.example

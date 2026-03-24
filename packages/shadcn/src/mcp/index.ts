@@ -19,7 +19,7 @@ import {
 
 export const server = new Server(
   {
-    name: "shadcn",
+    name: "shadcn2",
     version: "1.0.0",
   },
   {
@@ -48,7 +48,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             registries: z
               .array(z.string())
               .describe(
-                "Array of registry names to search (e.g., ['@shadcn', '@acme'])"
+                "Array of registry names to search (e.g., ['@shadcn2', '@acme'])"
               ),
             limit: z
               .number()
@@ -70,7 +70,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             registries: z
               .array(z.string())
               .describe(
-                "Array of registry names to search (e.g., ['@shadcn', '@acme'])"
+                "Array of registry names to search (e.g., ['@shadcn2', '@acme'])"
               ),
             query: z
               .string()
@@ -97,7 +97,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             items: z
               .array(z.string())
               .describe(
-                "Array of item names with registry prefix (e.g., ['@shadcn/button', '@shadcn/card'])"
+                "Array of item names with registry prefix (e.g., ['@shadcn2/button', '@shadcn2/card'])"
               ),
           })
         ),
@@ -111,7 +111,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             registries: z
               .array(z.string())
               .describe(
-                "Array of registry names to search (e.g., ['@shadcn', '@acme'])"
+                "Array of registry names to search (e.g., ['@shadcn2', '@acme'])"
               ),
             query: z
               .string()
@@ -130,7 +130,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             items: z
               .array(z.string())
               .describe(
-                "Array of items to get the add command for prefixed with the registry name (e.g., ['@shadcn/button', '@shadcn/card'])"
+                "Array of items to get the add command for prefixed with the registry name (e.g., ['@shadcn2/button', '@shadcn2/card'])"
               ),
           })
         ),
@@ -184,9 +184,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
                 \`${await npxShadcn("view @name-of-registry")}\`
 
                 For example: \`${await npxShadcn(
-                  "view @shadcn"
+                  "view @shadcn2"
                 )}\` or \`${await npxShadcn(
-                "view @shadcn @acme"
+                "view @shadcn2 @acme"
               )}\` to view multiple registries.
                 `,
             },
@@ -298,7 +298,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
                 type: "text",
                 text: dedent`No items found for: ${args.items.join(", ")}
 
-                Make sure the item names are correct and include the registry prefix (e.g., @shadcn/button).`,
+                Make sure the item names are correct and include the registry prefix (e.g., @shadcn2/button).`,
               },
             ],
           }

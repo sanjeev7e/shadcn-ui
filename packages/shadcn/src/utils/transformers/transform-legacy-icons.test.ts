@@ -2,7 +2,7 @@ import { type Config } from "@/src/utils/get-config"
 import { transformLegacyIcons } from "@/src/utils/transformers/transform-legacy-icons"
 import { describe, expect, test, vi } from "vitest"
 
-import { transform } from "../transformers"
+import { transform } from "."
 
 const testConfig: Config = {
   style: "new-york",

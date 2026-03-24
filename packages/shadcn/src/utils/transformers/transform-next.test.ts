@@ -3,7 +3,7 @@ import { type Config } from "@/src/utils/get-config"
 import { transformNext } from "@/src/utils/transformers/transform-next"
 import { describe, expect, test, vi } from "vitest"
 
-import { transform } from "../transformers"
+import { transform } from "."
 
 const testConfig: Config = {
   style: "new-york",
