@@ -19,7 +19,7 @@ import { STYLES } from "@/registry/styles"
 
 // This is a list of styles that we want to check into tracking.
 // This is used by the v4 site.
-const WHITELISTED_STYLES = ["new-york-v4"]
+const WHITELISTED_STYLES = ["new-york-v4", "custom-components-set-1"]
 
 // Collect paths for batch prettier formatting at the end.
 const prettierPaths: string[] = []
@@ -40,6 +40,9 @@ function getStylesToBuild() {
       })
     }
   }
+
+  // Custom component sets
+  stylesToBuild.push({ name: "custom-components-set-1", title: "Custom Components Set 1" })
 
   return stylesToBuild
 }

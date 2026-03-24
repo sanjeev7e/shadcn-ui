@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "title": "Button",
+  "description": "A simple button component with variant support.",
+  "files": [
+    {
+      "path": "registry/custom-components-set-1/ui/button.tsx",
+      "content": "import * as React from \"react\"\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  variant?: \"default\" | \"outline\" | \"ghost\"\n}\n\nexport function Button({\n  variant = \"default\",\n  className,\n  children,\n  ...props\n}: ButtonProps) {\n  const base =\n    \"inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50\"\n\n  const variants = {\n    default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n    outline:\n      \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n    ghost: \"hover:bg-accent hover:text-accent-foreground\",\n  }\n\n  return (\n    <button\n      className={[base, variants[variant], className].filter(Boolean).join(\" \")}\n      {...props}\n    >\n      {children}\n    </button>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
